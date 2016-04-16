@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/title_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageButton
+        android:id="@+id/ib_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="@dimen/margin"
+        android:src="@drawable/set_up"
+        android:visibility="gone"/>
+
+    <!--android:ellipsize="marquee"-->
+    <!--android:marqueeRepeatLimit="marquee_forever"-->
+    <!--android:scrollHorizontally="true"-->
+    <!--android:focusable="true"-->
+    <!--android:textSize="@dimen/text_size_small"-->
+    <!--android:focusableInTouchMode="true"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp">
+    <com.yizan.community.widget.MarqueeTextView
+        android:id="@+id/title"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/title_bar_margin"
+        android:text="@string/main_sel_location"
+        android:textColor="@color/theme_title_text"
+        android:textSize="@dimen/text_size_medium"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/big_locate"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:drawablePadding="@dimen/margin_micro"/>
+
+    </RelativeLayout>
+    <ImageButton
+        android:id="@+id/ib_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/title_bar_margin"
+        android:src="@drawable/ic_search"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/title_right3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:layout_marginRight="10dp">
+        <ImageView
+
+            android:id="@+id/img_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/title_message"
+            />
+        <TextView
+            android:id="@+id/title_right_text"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="14dp"
+            android:text="10"
+            android:textSize="10sp"
+            android:layout_centerVertical="true"
+            android:layout_above="@id/img_message"
+            android:layout_marginBottom="-10dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textColor="@color/white"
+            android:background="@drawable/title_right_ovrial"/>
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/view_least"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/shallow_gray"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

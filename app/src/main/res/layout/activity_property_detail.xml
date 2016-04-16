@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/divider_drawable"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context="com.yizan.community.wy.activity.PropertyDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公司名"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="right"
+            android:textColor="@color/theme_grey_text"
+            android:textSize="@dimen/text_size"
+            tools:text="3234234234"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系人"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size"/>
+
+        <TextView
+            android:id="@+id/tv_contract"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="right"
+            android:textColor="@color/theme_grey_text"
+            android:textSize="@dimen/text_size"
+            tools:text="3234234234"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="物业电话"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size"/>
+
+        <TextView
+            android:id="@+id/tv_tel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="right"
+            android:textColor="@color/theme_grey_text"
+            android:textSize="@dimen/text_size"
+            tools:text="3234234234"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_weight="1.0"
+            android:text="营业执照"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/iv_licences"
+            android:layout_width="@dimen/licences_width"
+            android:layout_height="@dimen/licences_heigth"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_small"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_licences"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+</LinearLayout>

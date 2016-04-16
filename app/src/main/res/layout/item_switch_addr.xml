@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/list_selector"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/item_switch_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_addr_line"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin">
+
+        <TextView
+            android:id="@+id/item_switch_addr_name"
+            style="@style/TextViewStyle"
+            android:text="123"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/item_switch_addr_mobile"
+            style="@style/TextViewStyle"
+            android:text="456"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/item_switch_addr_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/theme_black_text"
+        android:textSize="@dimen/text_size"
+        android:text="123"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/theme_background"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/img_defaults"
+            android:src="@drawable/addr_isdefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:id="@+id/text_defaults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="默认"
+            android:layout_toRightOf="@id/img_defaults"/>
+
+        <TextView
+            android:id="@+id/text_deletes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin"
+            android:text="删除"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:id="@+id/img_deletes"
+            android:src="@drawable/addr_delete"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/text_deletes"
+            android:layout_marginLeft="@dimen/margin"/>
+
+        <TextView
+            android:id="@+id/text_edits"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑"
+            android:layout_toLeftOf="@id/img_deletes"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:id="@+id/img_edits"
+            android:layout_toLeftOf="@id/text_edits"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/addr_edit"/>
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/item_switch_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_addr_line"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_small"
+        android:background="@color/theme_background"/>
+
+</LinearLayout>

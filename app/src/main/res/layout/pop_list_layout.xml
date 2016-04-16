@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView android:id="@+id/lv_list"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="@dimen/margin_small"
+          android:layout_marginRight="@dimen/margin_small"
+          android:background="@drawable/style_edt_boder"
+          android:divider="@drawable/divider_list"
+          android:padding="2dp"
+          android:scrollbars="none"/>

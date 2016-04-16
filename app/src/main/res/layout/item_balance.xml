@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/margin"
+    >
+
+
+    <TextView
+        android:id="@+id/balance_type"
+        style="@style/TextViewStyle"
+        tools:text="xxx"/>
+
+    <TextView
+        android:id="@+id/balance_time"
+        style="@style/TextViewStyle.Gray"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/text_size_small"
+        tools:text="2016-02-10"/>
+
+    <TextView
+        android:id="@+id/balance_sn"
+        style="@style/TextViewStyle.Gray"
+        android:layout_below="@id/balance_type"
+        android:layout_marginTop="@dimen/margin_micro"
+        tools:text="2016-02-10"/>
+
+    <TextView
+        android:id="@+id/balance_balance"
+        style="@style/TextViewStyle.Gray"
+        android:layout_below="@id/balance_sn"
+        android:layout_marginTop="@dimen/margin_micro"
+        tools:text="2016-02-10"/>
+
+    <TextView
+        android:id="@+id/balance_amount"
+        style="@style/TextViewStyle.Gray"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/balance_sn"
+        android:layout_marginTop="@dimen/margin_micro"
+        tools:text="2016-02-10"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/balance_amount"
+        android:layout_marginTop="@dimen/margin"
+        />
+</RelativeLayout>

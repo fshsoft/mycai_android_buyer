@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.yizan.community.bbs.activity.UserForumActivity">
+
+    <com.yizan.community.widget.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/white"
+        app:pstsIndicatorColor="@color/theme"
+        app:pstsIndicatorHeight="@dimen/margin_min"
+        app:zmsSelectedTabTextSize="@dimen/text_size_small"
+        app:zmsSelectedTabTextColor="@color/theme_main_text"
+        app:zmsTabTextColor="@color/theme_black_text"
+        app:zmsTabTextSize="@dimen/text_size_small"
+        app:pstsShouldExpand="true"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tabs"/>
+</RelativeLayout>

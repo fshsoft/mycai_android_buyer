@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.yizan.community.wy.activity.RepairAddActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+        <Button
+            android:id="@+id/btn_commit"
+            style="@style/ButtonStyle"
+            android:text="提交"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider_drawable"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin"
+                    android:text="小区名称:"
+                    android:textColor="@color/theme_black_text"
+                    android:textSize="@dimen/text_size"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/theme_black_text"
+                    android:textSize="@dimen/text_size"
+                    tools:text="3234234234"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin"
+                    android:text="故障类型:"
+                    android:textColor="@color/theme_black_text"
+                    android:textSize="@dimen/text_size"/>
+
+                <TextView
+                    android:id="@+id/tv_repair_type"
+                    style="@style/tab_row_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_micro"
+                    android:drawableRight="@drawable/down_arrow"
+                    android:gravity="center"
+                    android:hint="@string/msg_please_select"
+                    android:textColor="@color/theme_black_text"
+                    android:textSize="@dimen/text_size"
+                    />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="left|top"
+                android:textSize="@dimen/text_size"
+                android:hint="请输入故障描述"
+                android:maxLength="30000"
+                android:minLines="5"
+                android:padding="@dimen/margin"/>
+
+            <include layout="@layout/comm_divide_region"/>
+
+            <com.yizan.community.widget.MyGridView
+                android:id="@+id/gv_pics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:horizontalSpacing="@dimen/margin_micro"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                android:paddingTop="@dimen/margin_small"
+                android:verticalSpacing="@dimen/margin_micro"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

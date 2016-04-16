@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+    publishNonDefault true
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        buildConfigField 'String', 'DOMAIN_WWW', '"shnow.cn"'
+        buildConfigField 'String', 'DOMAIN_API', '"api."'
+    }
+    productFlavors {
+
+        shnow_cn {
+            buildConfigField 'String', 'DOMAIN_WWW', '"shnow.cn"'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+
+}

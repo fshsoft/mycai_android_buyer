@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="@dimen/margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size_big"
+            tools:text="Tttttttttt"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_grey_text"
+            android:textSize="@dimen/text_size_small"
+            tools:text="2015-11"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size"
+        android:layout_marginRight="@dimen/margin"
+        tools:text="33333333"/>
+
+    <com.yizan.community.widget.MyGridView
+        android:id="@+id/gv_pics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:horizontalSpacing="@dimen/margin_small"
+        android:listSelector="@null"
+        android:layout_marginRight="@dimen/margin"
+        android:numColumns="4"
+        android:verticalSpacing="@dimen/margin_small"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@drawable/divider_drawable" />
+</LinearLayout>

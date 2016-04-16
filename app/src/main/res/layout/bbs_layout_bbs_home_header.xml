@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:background="@color/theme_background"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@drawable/divider_drawable"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/tv_my_forum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawablePadding="@dimen/margin_micro"
+            android:drawableTop="@drawable/bbs_ic_forum_list"
+            android:gravity="center"
+            android:padding="@dimen/margin_small"
+            android:text="@string/my_forums"
+            />
+
+        <TextView
+            android:id="@+id/tv_my_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawablePadding="@dimen/margin_micro"
+            android:drawableTop="@drawable/bbs_ic_forum_msg"
+            android:gravity="center"
+            android:padding="@dimen/margin_small"
+            android:text="@string/my_forum_msg"
+            />
+    </LinearLayout>
+
+    <include layout="@layout/comm_divide_region"/>
+
+    <com.yizan.community.widget.MyGridView
+        android:id="@+id/gv_plate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="@dimen/margin_micro"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:padding="@dimen/margin_small"
+        android:verticalSpacing="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+</LinearLayout>

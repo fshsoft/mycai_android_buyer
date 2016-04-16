@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:listSelector="@drawable/list_selector"/>
+
+    <RelativeLayout
+        android:background="@color/background_gray"
+        android:id="@+id/list_empty"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/use_map_choose_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用地图选点"
+            android:textSize="@dimen/text_size"
+            android:layout_centerInParent="true"
+            android:background="@drawable/corners_red_address"
+            android:paddingLeft="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_above="@id/use_map_choose_point"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未找到符合条件的地址"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/th"
+            android:layout_above="@id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/th"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <!--<include layout="@layout/new_empty_view"/>-->
+</LinearLayout>

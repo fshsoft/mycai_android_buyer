@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/list_selector"
+              android:orientation="vertical"
+              android:paddingTop="@dimen/margin"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin">
+
+        <com.zongyou.library.widget.CustomImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/image_height_small"
+            android:layout_height="@dimen/image_height_small"
+            android:layout_marginRight="@dimen/margin"
+            android:src="@drawable/ic_default_square"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/theme_black_text"
+            android:layout_marginTop="@dimen/margin_micro"
+            android:maxLines="2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin">
+
+        <com.zongyou.library.widget.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/image_height_min"
+            android:layout_height="@dimen/image_height_min"
+            android:src="@drawable/ic_default_circle"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_micro"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/tv_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:drawableLeft="@drawable/bbs_ic_gray_heart"
+            android:textColor="@color/theme_grey_text"
+            android:drawablePadding="@dimen/margin_micro"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/tv_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:drawablePadding="@dimen/margin_micro"
+            android:drawableLeft="@drawable/bbs_ic_message"
+            android:textColor="@color/theme_grey_text"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_weight="1.0"
+            android:gravity="right"
+            android:text="2015-1-1"
+            android:textColor="@color/theme_grey_text"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_small"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin"
+        android:background="@color/theme_background"/>
+</LinearLayout>

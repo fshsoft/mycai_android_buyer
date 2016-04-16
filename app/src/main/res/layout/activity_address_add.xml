@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_gray">
+
+    <RelativeLayout
+        android:id="@+id/map_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.tencent.tencentmap.mapsdk.map.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            />
+
+        <EditText
+            android:id="@+id/shuru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="5dp"
+            android:drawableLeft="@drawable/fdj"
+            android:hint="输入小区、写字楼、学校等"
+            android:textSize="@dimen/text_size_small"
+            android:focusable="false"
+            android:background="@drawable/corners_white_address"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/locate_logo"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/near_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="附近配送地址"
+        android:textSize="@dimen/text_size"
+        android:layout_below="@id/map_top"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="@dimen/margin"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/near_by"
+        android:orientation="vertical">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        <ListView
+            android:id="@+id/poi_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@drawable/list_selector"
+            android:divider="@null"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <include layout="@layout/empty_view"/>
+    </LinearLayout>
+
+</RelativeLayout>

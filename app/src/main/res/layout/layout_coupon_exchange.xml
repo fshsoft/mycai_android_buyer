@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:paddingLeft="@dimen/margin"
+              android:paddingRight="@dimen/margin"
+              android:paddingTop="@dimen/margin_small"
+              android:paddingBottom="@dimen/margin_small"
+              android:gravity="center_vertical"
+    >
+
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_weight="1.0"
+        android:padding="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_mid"
+        android:background="@drawable/corners_white"
+        android:maxLength="8"
+        android:hint="我有兑换码..."/>
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_height"
+        android:text="立即兑换"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:background="@drawable/corners_theme_selector"/>
+</LinearLayout>

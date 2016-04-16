@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="type_balance" type="id"/>
+    <item name="type_online" type="id"/>
+</resources>

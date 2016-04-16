@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/recharge_money" />
+
+        <EditText
+            android:id="@+id/pay_recharge_et"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_weight="1"
+            android:numeric="integer"
+            android:textColor="@color/theme_black_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_gravity="center_vertical"
+            android:text="@string/recharge_money"
+            android:visibility="invisible" />
+
+        <TextView
+            style="@style/TextViewStyle.Gray"
+            android:layout_marginLeft="@dimen/margin"
+            android:text="@string/recharge_tip"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/theme_grey_text" />
+    </LinearLayout>
+
+</LinearLayout>

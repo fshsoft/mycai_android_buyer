@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin">
+
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/iv_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_square" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/theme_black_text"
+                android:textSize="@dimen/text_size"
+                tools:text="@string/wechat_pay" />
+
+            <TextView
+                android:id="@+id/pay_balance_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/shallow_gray_text"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone"
+                tools:text="@string/wechat_pay" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/balance_switch"
+            android:layout_width="60dp "
+            android:layout_height="30dp"
+            android:background="@drawable/btn_on" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_sep"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin"
+        android:background="@color/theme_divide_line" />
+</LinearLayout>

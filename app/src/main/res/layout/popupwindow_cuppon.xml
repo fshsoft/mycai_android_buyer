@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/cuppon_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/cuppon_top_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cuppontop"/>
+
+        <ImageView
+            android:id="@+id/cuppon_top_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/cuppon_top_img"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cuppondelete"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pop_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/cuppon_top_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/margin"
+            android:textColor="@color/btn_red_norm"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/cuppon_center_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuppon_top_num"
+            android:layout_centerHorizontal="true"
+            android:text="@string/cuppon_pop_tv2"
+            android:textColor="@color/gray_text_shallow"/>
+
+        <TextView
+            android:id="@+id/cuppon_bottom_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuppon_center_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin"
+            android:text="@string/cuppon_pop_tv3"
+            android:textColor="@color/gray_text_shallow"
+            />
+
+        <View
+            android:id="@+id/cuppon_devide"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/cuppon_bottom_tv"
+            android:background="@color/theme_divide_line"/>
+
+        <TextView
+            android:id="@+id/cuppon_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuppon_devide"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:paddingTop="8dp"
+            android:text="@string/cuppon_pop_send"
+            android:textColor="@color/title_red"
+            android:textSize="@dimen/text_size_big"/>
+    </RelativeLayout>
+</LinearLayout>
