@@ -125,6 +125,8 @@ public class HomePageFragment extends BaseFragment
 
 
         // 分类菜单
+        // 去掉格子先 —— Cendy Wang 04.17.2016
+        /*
         mClassifyGridView = mViewFinder.find(R.id.gv_classify);
         List<AdvInfo> advInfoList = new ArrayList<AdvInfo>();
         if (!ArraysUtils.isEmpty(mHomeConfig.menu) && mHomeConfig.menu.size() > 8) {
@@ -142,6 +144,7 @@ public class HomePageFragment extends BaseFragment
         }
 
         mClassifyGridView.setOnItemClickListener(this);
+        */
 
         // 活动列表
         initNotices();

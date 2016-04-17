@@ -137,7 +137,7 @@
 
     <!--首页-->
     <string name="home_recomment_goods">生活小助手</string>
-    <string name="home_recomment_shops">附近推荐商户</string>
+    <string name="home_recomment_shops">附近推荐菜场</string>
     <string name="home_more">更多》</string>
     <string name="main_sel_location">选择地址</string>
     <string name="home_notice_sel_location">请先选择地址</string>

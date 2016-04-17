@@ -72,7 +72,8 @@ import java.util.HashMap;
 public class MainActivity extends BaseActivity implements BaseActivity.ContainerTitleListener {
     private static final int LOC_REQUEST_CODE = 0x102;
     private String[] mTabText;
-    int[] mImageViewArray = new int[]{R.drawable.tab_home_selector,
+    int[] mImageViewArray = new int[]{
+            R.drawable.tab_home_selector,
             R.drawable.tab_shopping_selector,
             R.drawable.tab_bbs_selector,
             R.drawable.tab_user_selector
