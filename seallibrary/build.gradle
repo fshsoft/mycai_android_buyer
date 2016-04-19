@@ -9,13 +9,13 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-        buildConfigField 'String', 'DOMAIN_WWW', '"shnow.cn"'
+        buildConfigField 'String', 'DOMAIN_WWW', '"51mycai365.com"'
         buildConfigField 'String', 'DOMAIN_API', '"api."'
     }
     productFlavors {
 
         shnow_cn {
-            buildConfigField 'String', 'DOMAIN_WWW', '"shnow.cn"'
+            buildConfigField 'String', 'DOMAIN_WWW', '"51mycai365.com"'
         }
     }
     buildTypes {
