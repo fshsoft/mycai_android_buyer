@@ -4,9 +4,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                tools:context="com.yizan.community.activity.SellerGoodsActivity">
+                tools:context="com.fiftyonemycai365.buyer.activity.SellerGoodsActivity">
 
-    <com.yizan.community.widget.PagerSlidingTabStrip
+    <com.fiftyonemycai365.buyer.widget.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_bar_height"

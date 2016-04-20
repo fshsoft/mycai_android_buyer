@@ -41,7 +41,7 @@
         android:layout_height="0.5dp"
         android:layout_marginLeft="70dp"
         android:background="@color/theme_divide_line"/>
-    <com.yizan.community.widget.MyListView
+    <com.fiftyonemycai365.buyer.widget.MyListView
         android:id="@+id/lv_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

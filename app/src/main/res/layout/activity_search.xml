@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.yizan.community.widget.flow.FlowLayout
+            <com.fiftyonemycai365.buyer.widget.flow.FlowLayout
                 android:id="@+id/fl_hots"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
             <!--android:layout_height="0.5dp"-->
             <!--android:background="@color/theme_divide_line"/>-->
 
-            <com.yizan.community.widget.MyListView
+            <com.fiftyonemycai365.buyer.widget.MyListView
                 android:id="@+id/search_lv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

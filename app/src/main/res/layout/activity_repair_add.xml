@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="com.yizan.community.wy.activity.RepairAddActivity">
+    tools:context="com.fiftyonemycai365.buyer.wy.activity.RepairAddActivity">
 
     <RelativeLayout
         android:id="@+id/rl_bottom"
@@ -102,7 +102,7 @@
 
             <include layout="@layout/comm_divide_region"/>
 
-            <com.yizan.community.widget.MyGridView
+            <com.fiftyonemycai365.buyer.widget.MyGridView
                 android:id="@+id/gv_pics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

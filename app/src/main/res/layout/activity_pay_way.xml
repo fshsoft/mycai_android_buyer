@@ -5,7 +5,7 @@
     android:divider="@drawable/divider_list"
     android:orientation="vertical"
     android:showDividers="middle"
-    tools:context="com.yizan.community.activity.PayWayActivity">
+    tools:context="com.fiftyonemycai365.buyer.activity.PayWayActivity">
 
     <ViewStub
         android:id="@+id/pay_goods_viewstub"

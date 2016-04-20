@@ -2,9 +2,9 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="com.yizan.community.fragment.SellerGoodsFragment">
+                tools:context="com.fiftyonemycai365.buyer.fragment.SellerGoodsFragment">
 
-    <com.yizan.community.widget.MarqueeTextView
+    <com.fiftyonemycai365.buyer.widget.MarqueeTextView
         android:id="@+id/tv_notice"
         android:visibility="gone"
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
 
             />
 
-        <com.yizan.community.widget.stickylistheaders.StickyListHeadersListView
+        <com.fiftyonemycai365.buyer.widget.stickylistheaders.StickyListHeadersListView
             android:id="@+id/lv_goods"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
 
-    <com.yizan.community.widget.ShoppingCartView
+    <com.fiftyonemycai365.buyer.widget.ShoppingCartView
         android:id="@+id/layout_order_select"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

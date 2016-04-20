@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yizan.community.activity.MapAddressActivity">
+    tools:context="com.fiftyonemycai365.buyer.activity.MapAddressActivity">
 
     <include layout="@layout/comm_divide_region"/>
 

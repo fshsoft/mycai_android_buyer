@@ -19,9 +19,9 @@ public class Constants {
     public static final String KEY = "key";
     public static final String MAP_POINT = "mapPoint";
 
-    public static final String ACTION_NAME = "com.yizan.community.activity.OrderDetailActivity";
+    public static final String ACTION_NAME = "com.fiftyonemycai365.buyer.activity.OrderDetailActivity";
     /**Action name message **/
-    public static final String ACTION_MSG = "com.yizan.community.msg";
+    public static final String ACTION_MSG = "com.fiftyonemycai365.buyer.msg";
     //消息已读
     public static final int MSG_READ=1;
     //消息未读
@@ -89,7 +89,7 @@ public class Constants {
     }
 
     // 微信支付
-    public static final String ACTION_PAY_RESULT = "com.yizan.community.life.WXPAY_RECEIVED";
+    public static final String ACTION_PAY_RESULT = "com.fiftyonemycai365.buyer.life.WXPAY_RECEIVED";
 
     public static final String PAY_TYPE_WEICHAT = "weixin";
     public static final String PAY_TYPE_ALIPAY = "alipay";

@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.yizan.community.bbs.activity.UserForumActivity">
+    tools:context="com.fiftyonemycai365.buyer.bbs.activity.UserForumActivity">
 
-    <com.yizan.community.widget.PagerSlidingTabStrip
+    <com.fiftyonemycai365.buyer.widget.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_bar_height"

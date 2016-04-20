@@ -60,7 +60,7 @@
             android:layout_weight="1.0"
             android:orientation="horizontal">
 
-            <com.yizan.community.widget.SquareLayout
+            <com.fiftyonemycai365.buyer.widget.SquareLayout
 
                 android:layout_width="@dimen/image_height"
                 android:layout_height="@dimen/image_height">
@@ -73,9 +73,9 @@
                     android:src="@drawable/ic_default_square"
                     app:roundHeight="@dimen/comm_corner"
                     app:roundWidth="@dimen/comm_corner"/>
-            </com.yizan.community.widget.SquareLayout>
+            </com.fiftyonemycai365.buyer.widget.SquareLayout>
 
-            <com.yizan.community.widget.SquareLayout
+            <com.fiftyonemycai365.buyer.widget.SquareLayout
 
                 android:layout_width="@dimen/image_height"
                 android:layout_height="@dimen/image_height">
@@ -89,9 +89,9 @@
                     android:src="@drawable/ic_default_square"
                     app:roundHeight="@dimen/comm_corner"
                     app:roundWidth="@dimen/comm_corner"/>
-            </com.yizan.community.widget.SquareLayout>
+            </com.fiftyonemycai365.buyer.widget.SquareLayout>
 
-            <com.yizan.community.widget.SquareLayout
+            <com.fiftyonemycai365.buyer.widget.SquareLayout
 
                 android:layout_width="@dimen/image_height"
                 android:layout_height="@dimen/image_height">
@@ -105,9 +105,9 @@
                     android:src="@drawable/ic_default_square"
                     app:roundHeight="@dimen/comm_corner"
                     app:roundWidth="@dimen/comm_corner"/>
-            </com.yizan.community.widget.SquareLayout>
+            </com.fiftyonemycai365.buyer.widget.SquareLayout>
 
-            <com.yizan.community.widget.SquareLayout
+            <com.fiftyonemycai365.buyer.widget.SquareLayout
 
                 android:layout_width="@dimen/image_height"
                 android:layout_height="@dimen/image_height">
@@ -121,7 +121,7 @@
                     android:src="@drawable/ic_default_square"
                     app:roundHeight="@dimen/comm_corner"
                     app:roundWidth="@dimen/comm_corner"/>
-            </com.yizan.community.widget.SquareLayout>
+            </com.fiftyonemycai365.buyer.widget.SquareLayout>
 
         </LinearLayout>
 

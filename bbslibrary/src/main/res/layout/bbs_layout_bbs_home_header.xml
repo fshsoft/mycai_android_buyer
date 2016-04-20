@@ -41,7 +41,7 @@
 
     <include layout="@layout/comm_divide_region"/>
 
-    <com.yizan.community.widget.MyGridView
+    <com.fiftyonemycai365.buyer.widget.MyGridView
         android:id="@+id/gv_plate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

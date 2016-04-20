@@ -11,7 +11,7 @@ import com.tencent.mm.sdk.modelbase.BaseResp;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
-import com.yizan.community.BuildConfig;
+import com.fiftyonemycai365.buyer.BuildConfig;
 import com.fanwe.seallibrary.comm.Constants;
 
 public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {

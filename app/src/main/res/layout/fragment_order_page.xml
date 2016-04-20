@@ -5,9 +5,9 @@
     android:layout_height="match_parent"
     android:background="@color/theme_background"
     android:orientation="vertical"
-    tools:context="com.yizan.community.fragment.OrderPageFragment">
+    tools:context="com.fiftyonemycai365.buyer.fragment.OrderPageFragment">
 
-    <com.yizan.community.widget.PagerSlidingTabStrip
+    <com.fiftyonemycai365.buyer.widget.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="40dp"

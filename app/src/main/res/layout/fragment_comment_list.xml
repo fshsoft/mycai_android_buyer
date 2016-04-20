@@ -4,7 +4,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                tools:context="com.yizan.community.fragment.CommentListFragment">
+                tools:context="com.fiftyonemycai365.buyer.fragment.CommentListFragment">
 
     <include layout="@layout/comm_divide_line" />
     <android.support.v4.widget.SwipeRefreshLayout
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.yizan.community.widget.PageStaggeredGridView
+        <com.fiftyonemycai365.buyer.widget.PageStaggeredGridView
             android:id="@+id/gv_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

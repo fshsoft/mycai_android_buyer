@@ -4,7 +4,7 @@
               android:layout_height="match_parent"
               android:background="@color/theme_background"
               android:orientation="vertical"
-              tools:context="com.yizan.community.fragment.SellerCommentsFragment">
+              tools:context="com.fiftyonemycai365.buyer.fragment.SellerCommentsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

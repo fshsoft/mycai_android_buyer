@@ -11,7 +11,7 @@ android {
         }
     }
     defaultConfig {
-        applicationId "com.yizan.community"
+        applicationId "com.fiftyonemycai365.buyer"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 8

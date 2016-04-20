@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="@dimen/margin">
 
-    <com.yizan.community.widget.SquareLayout
+    <com.fiftyonemycai365.buyer.widget.SquareLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin"
@@ -23,7 +23,7 @@
             android:src="@drawable/ic_default_circle"
             />
 
-    </com.yizan.community.widget.SquareLayout>
+    </com.fiftyonemycai365.buyer.widget.SquareLayout>
 
     <TextView
         android:id="@+id/tv_name"

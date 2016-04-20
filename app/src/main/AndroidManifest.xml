@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="com.yizan.community"
+    package="com.fiftyonemycai365.buyer"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:uses-permissionandroid="http://schemas.android.com/apk/res-auto">
 
@@ -48,7 +48,7 @@
     <!-- 银联 end-->
 
     <application
-        android:name=".YizanApp"
+        android:name="com.fiftyonemycai365.buyer.YizanApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -60,7 +60,7 @@
         </meta-data>
 
         <activity
-            android:name=".activity.LoadingActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.LoadingActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -69,43 +69,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.MainActivity"
             android:launchMode="singleTask"/>
-        <activity android:name=".activity.LoginActivity"/>
-        <activity android:name=".activity.ForgetPasswordActivity"/>
-        <activity android:name=".activity.RegistorActivity"/>
-        <activity android:name=".activity.SwitchAddressActivity"/>
-        <activity android:name=".activity.MyCollectionActivity"/>
-        <activity android:name=".activity.ServerMessageActivity"/>
-        <activity android:name=".activity.AddressAddActivity"/>
-        <activity android:name=".activity.AddressAddCommonActivity"/>
-        <activity android:name=".activity.ChooseAddressActivity"/>
-        <activity android:name=".activity.AddressChooseCommonActivity"/>
-        <activity android:name=".activity.FeedbackActivity"/>
-        <activity android:name=".activity.SetUpActivity"/>
-        <activity android:name=".activity.NewHelpActivity"/>
-        <activity android:name=".activity.WebViewActivity"/>
-        <activity android:name=".activity.UserEditActivity"/>
-        <activity android:name=".activity.BusinessClassificationActivity"/>
-        <activity android:name=".activity.SellerDetailActivity"/>
-        <activity android:name=".activity.SellerGoodsActivity"/>
-        <activity android:name=".activity.GoodDetailActivity"/>
-        <activity android:name=".activity.SearchActivity"/>
-        <activity android:name=".activity.SearchBusinessActivity"/>
-        <activity android:name=".activity.MessageDetailActivity"/>
-        <activity android:name=".activity.ViewImageActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.LoginActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.ForgetPasswordActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.RegistorActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.SwitchAddressActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.MyCollectionActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.ServerMessageActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.AddressAddActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.AddressAddCommonActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.ChooseAddressActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.AddressChooseCommonActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.FeedbackActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.SetUpActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.NewHelpActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.WebViewActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.UserEditActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.BusinessClassificationActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.SellerDetailActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.SellerGoodsActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.GoodDetailActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.SearchActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.SearchBusinessActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.MessageDetailActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.ViewImageActivity"/>
         <activity
-            android:name=".activity.NewbieGuideActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.NewbieGuideActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-        <activity android:name=".activity.OrderDetailActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.OrderDetailActivity"/>
         <activity
-            android:name=".activity.GoodNormsActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.GoodNormsActivity"
             android:theme="@android:style/Theme.Translucent"/>
-        <activity android:name=".activity.SellerServicesActivity"/>
-        <activity android:name=".activity.JoinBusinessActivity"/>
-        <activity android:name=".activity.OperateListActivity"/>
-        <activity android:name=".activity.OrderConfirmActivity"/>
-        <activity android:name=".activity.PayWayActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.SellerServicesActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.JoinBusinessActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.OperateListActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.OrderConfirmActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.PayWayActivity" android:windowSoftInputMode="stateHidden"/>
         <!-- 下面的是第三方平台配置信息 -->
         <!-- 地图 -->
         <meta-data
@@ -115,7 +115,7 @@
         <!-- 推送 -->
         <!-- Required -->
         <receiver
-            android:name=".utils.PushReceiver"
+            android:name="com.fiftyonemycai365.buyer.utils.PushReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
@@ -137,42 +137,42 @@
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Translucent"/>
         <activity
-            android:name=".activity.PayResultActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.PayResultActivity"
             android:label="@string/title_activity_pay_result"/>
         <activity
-            android:name=".activity.AddCommentActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.AddCommentActivity"
             android:label="@string/title_activity_add_comment"/>
         <activity
-            android:name=".activity.CateListActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.CateListActivity"
             android:label="@string/title_activity_cate_list"/>
         <activity
-            android:name=".activity.MapAddressActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.MapAddressActivity"
             android:label="@string/title_activity_map_address">
         </activity>
         <activity
-            android:name=".activity.ShopRangeActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.ShopRangeActivity"
             android:label="@string/title_activity_shop_range">
         </activity>
         <activity
-            android:name=".activity.EditShopRegionActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.EditShopRegionActivity"
             android:label="@string/title_activity_edit_shop_region">
         </activity>
-        <activity android:name=".activity.WebMessageActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.WebMessageActivity"/>
         <activity
-            android:name=".wy.activity.PropertyActivity"
+            android:name="com.fiftyonemycai365.buyer.wy.activity.PropertyActivity"
             android:label="@string/title_activity_property"
             android:launchMode="singleTask">
         </activity>
         <activity
-            android:name=".wy.activity.OpenDoorActivity"
+            android:name="com.fiftyonemycai365.buyer.wy.activity.OpenDoorActivity"
             android:label="@string/title_activity_open_door">
         </activity>
         <activity
-            android:name=".wy.activity.DistrictListActivity"
+            android:name="com.fiftyonemycai365.buyer.wy.activity.DistrictListActivity"
             android:label="@string/title_activity_district_list">
         </activity>
         <activity
-            android:name=".wy.activity.IdentityAuthActivity"
+            android:name="com.fiftyonemycai365.buyer.wy.activity.IdentityAuthActivity"
             android:label="@string/title_activity_identity_auth">
         </activity>
         <activity
@@ -188,61 +188,61 @@
             android:screenOrientation="behind">
         </activity>
         <activity
-            android:name=".activity.UserNickActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.UserNickActivity"
             android:label="@string/title_activity_user_nick">
         </activity>
         <activity
-            android:name=".activity.UserBindPhoneActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.UserBindPhoneActivity"
             android:label="@string/title_activity_user_bind_phone">
         </activity>
         <activity
-            android:name=".activity.ChangePwdActivity"
+            android:name="com.fiftyonemycai365.buyer.activity.ChangePwdActivity"
             android:label="@string/title_activity_change_pwd">
         </activity>
-        <activity android:name=".activity.OrderListActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.activity.OrderListActivity">
         </activity>
 
         <!-- BBS -->
-        <activity android:name=".bbs.activity.PlateListActivity"/>
-        <activity android:name=".bbs.activity.BbsListActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.bbs.activity.PlateListActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.bbs.activity.BbsListActivity">
         </activity>
-        <activity android:name=".bbs.activity.BbsSearchActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.bbs.activity.BbsSearchActivity">
         </activity>
-        <activity android:name=".bbs.activity.BbsAddActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.bbs.activity.BbsAddActivity">
         </activity>
-        <activity android:name=".bbs.activity.BbsMsgActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.bbs.activity.BbsMsgActivity">
         </activity>
-        <activity android:name=".bbs.activity.UserForumActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.bbs.activity.UserForumActivity">
         </activity>
-        <activity android:name=".bbs.activity.ForumDetailActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.bbs.activity.ForumDetailActivity">
         </activity>
-        <activity android:name=".bbs.activity.ForumComplainActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.bbs.activity.ForumComplainActivity">
         </activity>
-        <activity android:name=".activity.CouponGetActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.activity.CouponGetActivity">
         </activity>
-        <activity android:name=".activity.CouponListActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.activity.CouponListActivity">
         </activity>
-        <activity android:name=".activity.BalanceListActivity"/>
-        <activity android:name=".activity.CouponUseActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.activity.BalanceListActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.CouponUseActivity">
         </activity>
-        <activity android:name=".wy.activity.UserDistrictActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.wy.activity.UserDistrictActivity">
         </activity>
-        <activity android:name=".wy.activity.NoticeListActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.wy.activity.NoticeListActivity">
         </activity>
-        <activity android:name=".wy.activity.DistrictDetailActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.wy.activity.DistrictDetailActivity">
         </activity>
-        <activity android:name=".wy.activity.OwnerDetailActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.wy.activity.OwnerDetailActivity">
         </activity>
-        <activity android:name=".wy.activity.PropertyDetailActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.wy.activity.PropertyDetailActivity">
         </activity>
-        <activity android:name=".wy.activity.RepairListActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.wy.activity.RepairListActivity">
         </activity>
-        <activity android:name=".wy.activity.RepairAddActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.wy.activity.RepairAddActivity">
         </activity>
-        <activity android:name=".wy.activity.RepairDetailActivity">
+        <activity android:name="com.fiftyonemycai365.buyer.wy.activity.RepairDetailActivity">
         </activity>
-        <activity android:name=".activity.NewAddressAddActivity"/>
-        <activity android:name=".activity.ChooseAddressByWebActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.NewAddressAddActivity"/>
+        <activity android:name="com.fiftyonemycai365.buyer.activity.ChooseAddressByWebActivity"/>
 
 
         <!-- 银联支付 -->

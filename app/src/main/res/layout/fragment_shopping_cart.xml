@@ -4,14 +4,14 @@
                 android:layout_height="match_parent"
                 android:background="@color/theme_background"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                tools:context="com.yizan.community.fragment.ShoppingCartFragment">
+                tools:context="com.fiftyonemycai365.buyer.fragment.ShoppingCartFragment">
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/sp_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.yizan.community.widget.PageStaggeredGridView
+        <com.fiftyonemycai365.buyer.widget.PageStaggeredGridView
             android:id="@+id/gv_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

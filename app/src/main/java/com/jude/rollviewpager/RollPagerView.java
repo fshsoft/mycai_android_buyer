@@ -16,7 +16,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.RelativeLayout;
 import android.widget.Scroller;
 
-import com.yizan.community.R;
+import com.fiftyonemycai365.buyer.R;
 
 import java.lang.reflect.Field;
 import java.util.Timer;

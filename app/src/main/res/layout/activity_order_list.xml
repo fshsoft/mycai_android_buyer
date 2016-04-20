@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.yizan.community.activity.OrderListActivity">
+    tools:context="com.fiftyonemycai365.buyer.activity.OrderListActivity">
     <fragment
         android:id="@+id/fl_order_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.yizan.community.fragment.OrderPageFragment" />
+        android:name="com.fiftyonemycai365.buyer.fragment.OrderPageFragment" />
 </RelativeLayout>

@@ -28,7 +28,7 @@
         android:layout_centerInParent="true"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp">
-    <com.yizan.community.widget.MarqueeTextView
+    <com.fiftyonemycai365.buyer.widget.MarqueeTextView
         android:id="@+id/title"
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollHorizontally="true"

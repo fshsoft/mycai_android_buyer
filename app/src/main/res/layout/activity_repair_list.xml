@@ -8,7 +8,7 @@
     android:divider="@drawable/divider_drawable"
     android:orientation="vertical"
     android:showDividers="middle"
-    tools:context="com.yizan.community.wy.activity.RepairListActivity">
+    tools:context="com.fiftyonemycai365.buyer.wy.activity.RepairListActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.yizan.community.widget.PageStaggeredGridView
+            <com.fiftyonemycai365.buyer.widget.PageStaggeredGridView
                 android:id="@+id/gv_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

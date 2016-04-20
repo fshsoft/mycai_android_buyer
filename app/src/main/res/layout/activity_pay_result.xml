@@ -4,7 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:gravity="center_horizontal"
-              tools:context="com.yizan.community.activity.PayResultActivity">
+              tools:context="com.fiftyonemycai365.buyer.activity.PayResultActivity">
 
     <TextView
         android:id="@+id/tv_order"

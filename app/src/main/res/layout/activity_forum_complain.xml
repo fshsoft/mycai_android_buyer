@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yizan.community.bbs.activity.ForumComplainActivity">
+    tools:context="com.fiftyonemycai365.buyer.bbs.activity.ForumComplainActivity">
 
     <EditText
         android:id="@+id/et_value"

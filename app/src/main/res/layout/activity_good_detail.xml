@@ -196,7 +196,7 @@
 
     </ScrollView>
 
-    <com.yizan.community.widget.ShoppingCartView
+    <com.fiftyonemycai365.buyer.widget.ShoppingCartView
         android:id="@+id/layout_order_select"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -63,7 +63,7 @@
         android:textColor="@color/theme_black_text"
         android:textSize="@dimen/text_size"/>
 
-    <com.yizan.community.widget.MyGridView
+    <com.fiftyonemycai365.buyer.widget.MyGridView
         android:id="@+id/gv_pics"
         android:layout_marginLeft="71dp"
         android:layout_width="match_parent"

@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.yizan.community.activity.CouponListActivity">
+    tools:context="com.fiftyonemycai365.buyer.activity.CouponListActivity">
 
-    <com.yizan.community.widget.PagerSlidingTabStrip
+    <com.fiftyonemycai365.buyer.widget.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_bar_height"

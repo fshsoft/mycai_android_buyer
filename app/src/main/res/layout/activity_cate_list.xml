@@ -3,7 +3,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                tools:context="com.yizan.community.activity.CateListActivity">
+                tools:context="com.fiftyonemycai365.buyer.activity.CateListActivity">
 
     <ListView
         android:id="@+id/lv_list"

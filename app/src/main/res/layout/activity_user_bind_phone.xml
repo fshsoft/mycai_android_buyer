@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/activity_vertical_margin"
-    tools:context="com.yizan.community.activity.UserBindPhoneActivity">
+    tools:context="com.fiftyonemycai365.buyer.activity.UserBindPhoneActivity">
 
     <LinearLayout
         android:id="@+id/ll_container"

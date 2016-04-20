@@ -3,7 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context="com.yizan.community.fragment.CouponListFragment">
+              tools:context="com.fiftyonemycai365.buyer.fragment.CouponListFragment">
     <include layout="@layout/layout_coupon_notice" />
     <include layout="@layout/fragment_base_list" />
 </LinearLayout>

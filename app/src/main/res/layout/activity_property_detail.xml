@@ -7,7 +7,7 @@
     android:divider="@drawable/divider_drawable"
     android:orientation="vertical"
     android:showDividers="middle"
-    tools:context="com.yizan.community.wy.activity.PropertyDetailActivity">
+    tools:context="com.fiftyonemycai365.buyer.wy.activity.PropertyDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
