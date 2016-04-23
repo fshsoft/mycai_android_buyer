@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.util.Log;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -95,7 +96,13 @@ public class BusinessClassificationActivity extends BaseActivity implements
 
 
         mComplexText = (TextView) findViewById(R.id.business_complex_text);
-        mComplexText.setText(R.string.sort_all);
+        //mComplexText.setText(R.string.sort_all);
+
+        // 修改成按距离最近排序, add by skywod 2016-04-23
+        mComplexText.setText(R.string.sort_distance);
+        sort = 3;
+        getSellerLists(true);
+
 
         listDatas = new ArrayList<SellerInfo>();
         mListView = (ListView) findViewById(R.id.business_classification_lv);
@@ -152,6 +159,7 @@ public class BusinessClassificationActivity extends BaseActivity implements
 
     @Override
     public void onClick(View v) {
+        Log.v("SKY","sort panel clicked");
         switch (v.getId()) {
             case R.id.business_all_cates:
                 initAllPop();
@@ -240,6 +248,8 @@ public class BusinessClassificationActivity extends BaseActivity implements
     }
 
     private void initComplexPop() {
+        // 关闭排序功能，直接返回，直接将以下功能注释掉，就okay了，add  by skywod 2016－04-23
+        /*
         View convertView = LayoutInflater.from(this).inflate(R.layout.pop_sort, null);
         convertView.setBackgroundColor(Color.WHITE);
         convertView.setBackgroundResource(R.drawable.style_edt_boder);
@@ -264,6 +274,7 @@ public class BusinessClassificationActivity extends BaseActivity implements
             }
         });
         shoePopState(mComplexText, true);
+        */
     }
 
     private void initAllPop() {
@@ -323,7 +334,10 @@ public class BusinessClassificationActivity extends BaseActivity implements
         if (ArraysUtils.isEmpty(datas)) {
             return;
         } else {
-            listSellerCates.add(new SellerCatesInfo("全部"));
+
+            // 保持和iOS的一直，一级分类中不要添加去除“全部”
+            // modified by skywod 2015-04-23
+            //listSellerCates.add(new SellerCatesInfo("全部"));
             listSellerCates.addAll(datas);
         }
         if(TextUtils.isEmpty(ids)){
