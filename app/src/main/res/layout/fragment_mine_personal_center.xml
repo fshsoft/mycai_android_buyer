@@ -280,7 +280,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_arrow_right" />
             </LinearLayout>
-
+            <!--
             <LinearLayout
                 android:id="@+id/ll_my_district"
                 android:layout_width="fill_parent"
@@ -319,10 +319,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_arrow_right" />
-            </LinearLayout>
+            </LinearLayout> !-->
         </LinearLayout>
 
         <include layout="@layout/comm_divide_region" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -333,6 +334,7 @@
             android:paddingLeft="@dimen/margin"
             android:showDividers="middle">
 
+            <!--
             <LinearLayout
                 android:id="@+id/join_business_ll"
                 android:layout_width="fill_parent"
@@ -363,7 +365,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_arrow_right" />
             </LinearLayout>
-
+            !-->
             <LinearLayout
                 android:id="@+id/share_ll"
                 android:layout_width="fill_parent"

@@ -115,9 +115,9 @@ public class PersonalCenterFragment extends BaseFragment implements View.OnClick
 
 
         mViewFinder.find(R.id.my_collection).setOnClickListener(this);
-        mJoinBusinessView =
-                mViewFinder.find(R.id.join_business_ll);
-        mJoinBusinessView.setOnClickListener(this);
+        //mJoinBusinessView =
+        //        mViewFinder.find(R.id.join_business_ll);
+        //mJoinBusinessView.setOnClickListener(this);
         mViewFinder.find(R.id.service_msg).setOnClickListener(this);
 
         mViewFinder.find(R.id.addr_management).setOnClickListener(this);
@@ -154,7 +154,7 @@ public class PersonalCenterFragment extends BaseFragment implements View.OnClick
         mViewFinder.find(R.id.ll_my_order).setOnClickListener(this);
         mCoupon.setOnClickListener(this);
         mViewFinder.find(R.id.personal_balance).setOnClickListener(this);
-        mViewFinder.find(R.id.ll_my_district).setOnClickListener(this);
+        //mViewFinder.find(R.id.ll_my_district).setOnClickListener(this);
         mBalanceTV = mViewFinder.find(R.id.personal_balance);
     }
 
@@ -377,6 +377,7 @@ public class PersonalCenterFragment extends BaseFragment implements View.OnClick
                     O2OUtils.turnLogin(mFragmentActivity);
                 }
                 break;
+            /*
             case R.id.ll_my_district:
                 if (O2OUtils.isLogin(mFragmentActivity)) {
                     UserDistrictActivity.start(getActivity());
@@ -385,6 +386,7 @@ public class PersonalCenterFragment extends BaseFragment implements View.OnClick
                     O2OUtils.turnLogin(mFragmentActivity);
                 }
                 break;
+            */
             case R.id.personal_balance:
                 // 余额
                 if (O2OUtils.isLogin(mFragmentActivity)) {
