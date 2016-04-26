@@ -14,27 +14,25 @@ android {
         applicationId "com.fiftyonemycai365.buyer"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 8
+        versionCode 1
         versionName "1.0"
 
         buildConfigField 'boolean', 'MULTI_CATES', 'true'
         buildConfigField 'String', 'MAP_ID', '"WNRBZ-QBKA3-DD43U-3C6BS-TDRYT-67FSH"'
-        buildConfigField 'String', 'WX_APP_ID', '"wx84ca610fce9ab38f"'
+        buildConfigField 'String', 'WX_APP_ID', '"wxb7c973759943c44d"'
         buildConfigField 'String', 'SHARE_SDK', '"10441481153e6"'
         buildConfigField 'String', 'STAT_KEY', '"A94ZLZZKZ11F"'
-        buildConfigField 'String', 'APP_CHANNEL', '"FanWe"'
+        buildConfigField 'String', 'APP_CHANNEL', '"General"'
         buildConfigField 'boolean', 'WEB_MSG', 'true' //消息跳转（是否跳转WEB,掌管定制）
         buildConfigField 'boolean', 'GOOD_DETAIL_SQUARE', 'false' //商品详情，广告图改成方形
         buildConfigField 'boolean', 'ADDRESS_SIMPLE', 'false' //地址添加，定位功能只作标注（是否跳转WEB,掌管定制）
         manifestPlaceholders = [TENCENTMAPSDK_VALUE: 'WNRBZ-QBKA3-DD43U-3C6BS-TDRYT-67FSH', JPUSH_APPKEY_VALUE: '13e94d313815184ac279faeb', MIAODOU_APP_KEY: '4bb16b42b9c0354682f6eb4943abbe9a']
     }
     productFlavors {
-        shnow_cn {
-            versionCode 1
+        mycai365 {
+            versionCode 2
             versionName "1.0"
         }
-
-
     }
     buildTypes {
         release {
@@ -65,7 +63,7 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
-    shnow_cnCompile project(path: ':seallibrary', configuration: 'shnow_cnRelease')
+    mycai365Compile project(path: ':seallibrary', configuration: 'shnow_cnRelease')
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.github.2tu:ZYLibrary:1.0.11'
     compile 'com.etsy.android.grid:library:1.0.5'
