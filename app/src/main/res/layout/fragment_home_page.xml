@@ -61,6 +61,7 @@
                 app:rollviewpager_hint_mode="point"
                 app:rollviewpager_play_delay="3000"/>
 
+
             <com.fiftyonemycai365.buyer.widget.MyGridView
                 android:id="@+id/gv_classify"
                 android:layout_width="match_parent"
@@ -76,6 +77,7 @@
                 android:horizontalSpacing="@dimen/margin_micro"
                 android:gravity="center_horizontal"
                 />
+
 
             <include
                 android:id="@+id/line_hor_notice"

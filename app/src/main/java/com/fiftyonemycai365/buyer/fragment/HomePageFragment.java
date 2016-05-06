@@ -110,6 +110,7 @@ public class HomePageFragment extends BaseFragment
         initRetryState(0);
         mViewFinder.find(R.id.sv_container).setVisibility(View.VISIBLE);
 
+
         // 广告banner
         mRollViewPager = mViewFinder.find(R.id.roll_view_pager);
 

@@ -80,26 +80,26 @@ public class BusinessClassificationActivity extends BaseActivity implements
         setTitleListener_RightImage(this);
         setPageTag(TagManager.BUSINESS_CLASSIFICATION_ACTIVITY);
         Intent intent = this.getIntent();
-        mAllText = (TextView) findViewById(R.id.business_all_text);
+        //mAllText = (TextView) findViewById(R.id.business_all_text);
         ids = intent.getStringExtra(Constants.EXTRA_DATA);
-        mAllText.setText(intent.getStringExtra(Constants.EXTRA_TITLE));
+        //mAllText.setText(intent.getStringExtra(Constants.EXTRA_TITLE));
         initViews();
     }
 
     private void initViews() {
         mSwipeRefreshLayout = mViewFinder.find(R.id.swipe_container);
         RefreshLayoutUtils.initSwipeRefreshLayout(BusinessClassificationActivity.this, mSwipeRefreshLayout, this, true);
-//        mAll = (RelativeLayout)findViewById(R.id.business_all_cates);
-//        mAll.setOnClickListener(this);
-        mComplex = (RelativeLayout) findViewById(R.id.business_complex_cates);
-        mComplex.setOnClickListener(this);
+        //mAll = (RelativeLayout)findViewById(R.id.business_all_cates);
+        //mAll.setOnClickListener(this);
+        // mComplex = (RelativeLayout) findViewById(R.id.business_complex_cates);
+       //mComplex.setOnClickListener(this);
 
 
-        mComplexText = (TextView) findViewById(R.id.business_complex_text);
+        //mComplexText = (TextView) findViewById(R.id.business_complex_text);
         //mComplexText.setText(R.string.sort_all);
 
         // 修改成按距离最近排序, add by skywod 2016-04-23
-        mComplexText.setText(R.string.sort_distance);
+        //mComplexText.setText(R.string.sort_distance);
         sort = 3;
         getSellerLists(true);
 
@@ -161,12 +161,12 @@ public class BusinessClassificationActivity extends BaseActivity implements
     public void onClick(View v) {
         Log.v("SKY","sort panel clicked");
         switch (v.getId()) {
-            case R.id.business_all_cates:
-                initAllPop();
-                return;
-            case R.id.business_complex_cates:
-                initComplexPop();
-                return;
+            //case R.id.business_all_cates:
+            //    initAllPop();
+            //   return;
+            //case R.id.business_complex_cates:
+            //    initComplexPop();
+            //    return;
             case R.id.tv_zonghe:
                 sort = 0;
                 break;
@@ -207,7 +207,7 @@ public class BusinessClassificationActivity extends BaseActivity implements
             return;
         }
 
-//        CustomDialogFragment.show(getSupportFragmentManager(), R.string.msg_loading, BusinessClassificationActivity.class.getName());
+        //CustomDialogFragment.show(getSupportFragmentManager(), R.string.msg_loading, BusinessClassificationActivity.class.getName());
         Map<String, String> data = new HashMap<>();
         data.put("sort", String.valueOf(sort));
         data.put("page", String.valueOf(mPage));
@@ -292,7 +292,7 @@ public class BusinessClassificationActivity extends BaseActivity implements
         popupWindowAll.setBackgroundDrawable(new BitmapDrawable());
         int xoffset = 0;
         int yoffset = 10;
-        popupWindowAll.showAsDropDown(mAll, xoffset, yoffset);
+        //popupWindowAll.showAsDropDown(mAll, xoffset, yoffset);
         mPopListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -344,12 +344,12 @@ public class BusinessClassificationActivity extends BaseActivity implements
             ids = "0";
         }
         defaultSelCate(Integer.parseInt(ids));
-        mPopMenuButton = (PopMenuButton) findViewById(R.id.pb_cates);
+        //mPopMenuButton = (PopMenuButton) findViewById(R.id.pb_cates);
 
         DoubleListViewHolder holder = new DoubleListViewHolder();
 
-        mPopMenuButton.setContentView(holder.getView());
-        mPopMenuButton.setIPopMenu(this);
+        //mPopMenuButton.setContentView(holder.getView());
+        //mPopMenuButton.setIPopMenu(this);
         holder.refreshView(listSellerCates);
         holder.setIListSel(this);
     }
