@@ -38,6 +38,7 @@ import com.fiftyonemycai365.buyer.activity.OrderListActivity;
 import com.fiftyonemycai365.buyer.activity.RegistorActivity;
 import com.fiftyonemycai365.buyer.activity.ServerMessageActivity;
 import com.fiftyonemycai365.buyer.activity.SetUpActivity;
+import com.fiftyonemycai365.buyer.activity.ShallActivity;
 import com.fiftyonemycai365.buyer.activity.SwitchAddressActivity;
 import com.fiftyonemycai365.buyer.activity.UserEditActivity;
 import com.fiftyonemycai365.buyer.activity.WebMessageActivity;
@@ -353,9 +354,12 @@ public class PersonalCenterFragment extends BaseFragment implements View.OnClick
 
                 break;
             case R.id.share_ll:
-                InitInfo configInfo = PreferenceUtils.getObject(mFragmentActivity, InitInfo.class);
+//                InitInfo configInfo = PreferenceUtils.getObject(mFragmentActivity, InitInfo.class);
 //                IntentUtils.sendto(mFragmentActivity, "", getString(R.string.share_content_arg, getString(R.string.app_name), configInfo.appDownUrl));
-                IntentUtils.sendto(mFragmentActivity, "", configInfo.shareContent);
+//                IntentUtils.sendto(mFragmentActivity, "", configInfo.shareContent);
+
+                startActivity(new Intent(getActivity(), ShallActivity.class));
+
                 break;
             case R.id.ll_gurad:
                 PropertyActivity.start(getActivity(), null);

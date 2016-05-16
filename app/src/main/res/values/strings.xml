@@ -611,4 +611,9 @@
     <string name="balance_pay_need_online">还需在线支付%1$s元</string>
     <string name="err_get_balance_pay">获取账户余额失败</string>
     <string name="err_balance_not_enough">账户余额不足</string>
+    <!--我的-分享-->
+    <string name="my_shall">分享</string>
+    <string name="my_shall_friends">分享给好友</string>
+    <string name="my_shall_down_app">邀请好友下载app</string>
+    <string name="my_shall_saoyisao">扫一扫，有惊喜！</string>
 </resources>
