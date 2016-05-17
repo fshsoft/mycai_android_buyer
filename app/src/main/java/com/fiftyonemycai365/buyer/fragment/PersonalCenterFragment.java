@@ -38,7 +38,7 @@ import com.fiftyonemycai365.buyer.activity.OrderListActivity;
 import com.fiftyonemycai365.buyer.activity.RegistorActivity;
 import com.fiftyonemycai365.buyer.activity.ServerMessageActivity;
 import com.fiftyonemycai365.buyer.activity.SetUpActivity;
-import com.fiftyonemycai365.buyer.activity.ShallActivity;
+import com.fiftyonemycai365.buyer.activity.ShareActivity;
 import com.fiftyonemycai365.buyer.activity.SwitchAddressActivity;
 import com.fiftyonemycai365.buyer.activity.UserEditActivity;
 import com.fiftyonemycai365.buyer.activity.WebMessageActivity;
@@ -46,7 +46,6 @@ import com.fiftyonemycai365.buyer.utils.ApiUtils;
 import com.fiftyonemycai365.buyer.utils.O2OUtils;
 import com.fiftyonemycai365.buyer.utils.TagManager;
 import com.fiftyonemycai365.buyer.wy.activity.PropertyActivity;
-import com.fiftyonemycai365.buyer.wy.activity.UserDistrictActivity;
 import com.zongyou.library.app.BaseFragment;
 import com.zongyou.library.app.IntentUtils;
 import com.zongyou.library.util.NetworkUtils;
@@ -358,7 +357,7 @@ public class PersonalCenterFragment extends BaseFragment implements View.OnClick
 //                IntentUtils.sendto(mFragmentActivity, "", getString(R.string.share_content_arg, getString(R.string.app_name), configInfo.appDownUrl));
 //                IntentUtils.sendto(mFragmentActivity, "", configInfo.shareContent);
 
-                startActivity(new Intent(getActivity(), ShallActivity.class));
+                startActivity(new Intent(getActivity(), ShareActivity.class));
 
                 break;
             case R.id.ll_gurad:

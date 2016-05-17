@@ -510,4 +510,8 @@ public class URLConstants {
     // 社区公告已读
     public static final String WY_ARTICLE_READ = DOMAIN + "article.read";
 
+    //分享
+    public static final String WY_SHARE = DOMAIN + "useractive.share";
+
+
 }

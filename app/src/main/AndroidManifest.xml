@@ -257,7 +257,7 @@
         </activity>
         <activity android:name="com.fiftyonemycai365.buyer.activity.NewAddressAddActivity"/>
         <activity android:name="com.fiftyonemycai365.buyer.activity.ChooseAddressByWebActivity"/>
-        <activity android:name=".activity.ShallActivity"/>
+        <activity android:name=".activity.ShareActivity"/>
 
         <!-- 银联支付 -->
         <uses-library
@@ -297,7 +297,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize" >
 
             <intent-filter>
-                <data android:scheme="tencent100371282" />
+                <data android:scheme="tencent1105243105" />
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
