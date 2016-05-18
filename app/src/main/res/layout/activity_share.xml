@@ -24,25 +24,25 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:src="@drawable/cuppon_wx"/>
+            android:src="@drawable/sina_icon"/>
         <ImageView
             android:id="@+id/share_wechat_friends"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:src="@drawable/cuppon_wx"/>
+            android:src="@drawable/wechat_friend_icon"/>
         <ImageView
             android:id="@+id/share_wechat"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:src="@drawable/cuppon_wx"/>
+            android:src="@drawable/wechat_icon"/>
         <ImageView
             android:id="@+id/share_qq"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:src="@drawable/cuppon_wx"/>
+            android:src="@drawable/qq_icon"/>
 
     </LinearLayout>
 
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:text="@string/my_shall_saoyisao"
             android:textSize="@dimen/text_size"
-            android:drawablePadding="@dimen/margin_mid"
+            android:layout_marginTop="@dimen/margin_mid"
             android:textColor="@color/theme_black_text"/>
 
     </LinearLayout>

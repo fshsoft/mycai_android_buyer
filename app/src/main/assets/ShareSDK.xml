@@ -11,7 +11,7 @@
         AppKey="2217555972"
         AppSecret="20f003b696de1469e64ad315f3ca3f96"
         RedirectUrl="http://www.sharesdk.cn"
-        ShareByAppClient="true"
+        ShareByAppClient="false"
         Enable="true" />
 
 

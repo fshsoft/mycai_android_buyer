@@ -76,11 +76,12 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
 
    private void shareWeibo(){
        ShareParams sp = new ShareParams();
-       sp.setText("新浪微博分享");
+       sp.setText("My菜，我是你的菜，对你有真爱"+shareUrl);
        sp.setImagePath(file.getPath());
-//       sp.setImageUrl(shareUrl);
+//       sp.setImageUrl(shareUrl);//需要开通高级付费接口才能添加网络图片
+//       sp.setUrl(shareUrl);
        Platform weibo = ShareSDK.getPlatform(SinaWeibo.NAME);
-       weibo.SSOSetting(true);
+       weibo.SSOSetting(false);
        // 设置分享事件回调
        weibo.setPlatformActionListener(this);
        // 执行图文分享
@@ -89,9 +90,9 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
 
     private void shareQQ(){
         ShareParams sp = new ShareParams();
-        sp.setText("测试分享微博");
-        sp.setTitle("分享时显示的文字");
-        sp.setImageUrl("http://img2.3lian.com/2014/f2/181/109.jpg");
+        sp.setText("我是你的菜，对你有真爱");
+        sp.setTitle("My菜");
+        sp.setImageUrl(file.getPath());
         sp.setTitleUrl(shareUrl);
         Platform qq = ShareSDK.getPlatform(QQ.NAME);
         // 设置分享事件回调
@@ -102,9 +103,9 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
 
     private void shareWechat(){
         ShareParams sp = new ShareParams();
-        sp.setText("测试分享的文本");
-        sp.setTitle("分享时显示的文字");
-        sp.setImageUrl("http://img2.3lian.com/2014/f2/181/109.jpg");
+        sp.setText("我是你的菜，对你有真爱");
+        sp.setTitle("My菜");
+        sp.setImagePath(file.getPath());
         sp.setShareType(Platform.SHARE_WEBPAGE);//一个链接的收藏
         sp.setUrl(shareUrl);
 
@@ -119,9 +120,9 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
     private void shareWechatFriends(){
         ShareParams sp = new ShareParams();
         Platform.ShareParams spf = new Platform.ShareParams();
-        spf.setTitle("分享时显示的文字");
-        spf.setImageUrl("http://img2.3lian.com/2014/f2/181/109.jpg");
-        spf.setText("测试分享的文本");
+        spf.setTitle("My菜");
+        spf.setImagePath(file.getPath());
+        spf.setText("我是你的菜，对你有真爱");
         spf.setShareType(Platform.SHARE_WEBPAGE);//链接分享至朋友圈
         spf.setUrl(shareUrl);
 
@@ -166,7 +167,6 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
         }
         qrcodeUrl = shareInfo.qrcodeUrl;
         shareUrl= shareInfo.shareUrl;
-        ToastUtils.show(this,shareUrl+"");
         setImageUrl(share_image,qrcodeUrl,R.drawable.no_headportaint);
     }
 
