@@ -125,9 +125,9 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
 
     private void shareWechatFriends(){
         Platform.ShareParams spf = new Platform.ShareParams();
-        spf.setTitle("My菜");
+        spf.setTitle("我是您的菜，对您有真爱，下载注册即送优惠券");
         spf.setImagePath(file.getPath());
-        spf.setText("我是您的菜，对您有真爱，下载注册即送优惠券");
+//        spf.setText("我是您的菜，对您有真爱，下载注册即送优惠券");
         spf.setShareType(Platform.SHARE_WEBPAGE);//链接分享至朋友圈
         spf.setUrl(shareUrl);
 
