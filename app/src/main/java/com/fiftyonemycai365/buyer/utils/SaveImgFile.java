@@ -90,5 +90,43 @@ public class SaveImgFile {
         return bitmap;
     }
 
+    /**
+     * 将bitmap转为file保存
+     */
+    public static File saveBitmapFile(Bitmap bitmap, String filename){
+
+        File file;
+        BufferedOutputStream bos;
+        String storageState = Environment.getExternalStorageState();// 获取sd卡的状态
+        if (Environment.MEDIA_MOUNTED.equals(storageState)) {// 如果已挂载状态
+            file = new File(Environment.getExternalStorageDirectory().getPath()+"/myCai/" + filename + ".jpg");
+            try {
+                bos = new BufferedOutputStream(new FileOutputStream(file));
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
+                bos.flush();
+                bos.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else{
+            file = new File("/myCai/" + filename + ".jpg");
+            try {
+                bos = new BufferedOutputStream(new FileOutputStream(file));
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
+                bos.flush();
+                bos.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return file;
+
+    }
+
+
 }
 

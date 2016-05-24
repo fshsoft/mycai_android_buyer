@@ -615,5 +615,5 @@
     <string name="my_shall">分享</string>
     <string name="my_shall_friends">分享给好友</string>
     <string name="my_shall_down_app">邀请好友下载app</string>
-    <string name="my_shall_saoyisao">扫一扫，有惊喜！</string>
+    <string name="my_shall_saoyisao">扫一扫！有惊喜，长按保存二维码！</string>
 </resources>

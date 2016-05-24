@@ -1,5 +1,8 @@
 package com.fiftyonemycai365.buyer.activity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -26,9 +29,11 @@ import com.zongyou.library.util.NetworkUtils;
 import com.zongyou.library.util.ToastUtils;
 import com.zongyou.library.util.storage.PreferenceUtils;
 import com.zongyou.library.volley.RequestManager;
-
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,8 +49,8 @@ import cn.sharesdk.wechat.moments.WechatMoments;
 /**
  * 分享
  */
-public class ShareActivity extends BaseActivity implements BaseActivity.TitleListener, View.OnClickListener, PlatformActionListener {
-    private ImageView weibo,wechat_friends,wechat,qq;
+public class ShareActivity extends BaseActivity implements BaseActivity.TitleListener, View.OnClickListener, PlatformActionListener, View.OnLongClickListener {
+    private TextView weibo,wechat_friends,wechat,qq;
     private NetworkImageView share_image;
     private File file;
     @Override
@@ -59,14 +64,15 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
             e.printStackTrace();
         }
         share_image = (NetworkImageView) findViewById(R.id.share_image);
-        weibo = (ImageView) findViewById(R.id.share_weibo);
-        wechat = (ImageView) findViewById(R.id.share_wechat);
-        wechat_friends = (ImageView) findViewById(R.id.share_wechat_friends);
-        qq = (ImageView) findViewById(R.id.share_qq);
+        weibo = (TextView) findViewById(R.id.share_weibo);
+        wechat = (TextView) findViewById(R.id.share_wechat);
+        wechat_friends = (TextView) findViewById(R.id.share_wechat_friends);
+        qq = (TextView) findViewById(R.id.share_qq);
         weibo.setOnClickListener(this);
         wechat_friends.setOnClickListener(this);
         wechat.setOnClickListener(this);
         qq.setOnClickListener(this);
+        share_image.setOnLongClickListener(this);
         loadShare();
 
         ShareSDK.initSDK(this);
@@ -76,7 +82,7 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
 
    private void shareWeibo(){
        ShareParams sp = new ShareParams();
-       sp.setText("My菜，我是你的菜，对你有真爱"+shareUrl);
+       sp.setText("My菜，我是您的菜，对您有真爱，下载注册即送优惠券"+shareUrl);
        sp.setImagePath(file.getPath());
 //       sp.setImageUrl(shareUrl);//需要开通高级付费接口才能添加网络图片
 //       sp.setUrl(shareUrl);
@@ -90,9 +96,9 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
 
     private void shareQQ(){
         ShareParams sp = new ShareParams();
-        sp.setText("我是你的菜，对你有真爱");
+        sp.setText("我是您的菜，对您有真爱，下载注册即送优惠券");
         sp.setTitle("My菜");
-        sp.setImageUrl(file.getPath());
+        sp.setImagePath(file.getPath());
         sp.setTitleUrl(shareUrl);
         Platform qq = ShareSDK.getPlatform(QQ.NAME);
         // 设置分享事件回调
@@ -103,7 +109,7 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
 
     private void shareWechat(){
         ShareParams sp = new ShareParams();
-        sp.setText("我是你的菜，对你有真爱");
+        sp.setText("我是您的菜，对您有真爱，下载注册即送优惠券");
         sp.setTitle("My菜");
         sp.setImagePath(file.getPath());
         sp.setShareType(Platform.SHARE_WEBPAGE);//一个链接的收藏
@@ -118,11 +124,10 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
     }
 
     private void shareWechatFriends(){
-        ShareParams sp = new ShareParams();
         Platform.ShareParams spf = new Platform.ShareParams();
         spf.setTitle("My菜");
         spf.setImagePath(file.getPath());
-        spf.setText("我是你的菜，对你有真爱");
+        spf.setText("我是您的菜，对您有真爱，下载注册即送优惠券");
         spf.setShareType(Platform.SHARE_WEBPAGE);//链接分享至朋友圈
         spf.setUrl(shareUrl);
 
@@ -256,5 +261,52 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
     };
 
 
+    @Override
+    public boolean onLongClick(View v) {
+        new MYTask().execute(qrcodeUrl);
+        return true;
+    }
 
+
+    class MYTask extends AsyncTask<String, Void, Bitmap> {
+
+        URL url;
+        HttpURLConnection conn ;
+        Bitmap bitmap;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+//            dialog.show();
+        }
+
+        @Override
+        protected Bitmap doInBackground(String... arg0) {
+
+            try {
+                url = new URL(arg0[0]);
+
+                conn = (HttpURLConnection)url.openConnection();
+                conn.setConnectTimeout(5000);
+                conn.setRequestMethod("GET");
+                if(conn.getResponseCode() == 200){
+                    InputStream inputStream = conn.getInputStream();
+                    bitmap = BitmapFactory.decodeStream(inputStream);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            return bitmap;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap result) {
+            super.onPostExecute(result);
+            SaveImgFile.saveBitmapFile(result,"qrcode_icon");
+//            dialog.dismiss();
+            ToastUtils.show(ShareActivity.this,"二维码已保存到相册");
+        }
+
+    }
 }
