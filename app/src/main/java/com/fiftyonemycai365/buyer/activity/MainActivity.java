@@ -88,6 +88,7 @@ public class MainActivity extends BaseActivity implements BaseActivity.Container
     private ImageButton mTitleLeft22;
     private TextView mTitleText11;
     public static MainActivity activity;
+    private boolean flag =false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -551,9 +552,16 @@ public class MainActivity extends BaseActivity implements BaseActivity.Container
                 initHomeTitle(PreferenceUtils.getObject(MainActivity.this, UserAddressInfo.class));
                 break;
             case 1:
-                if (O2OUtils.turnLogin(MainActivity.this.getApplicationContext())) {
-                    return;
+                if(flag){
+                    mTabHost.setCurrentTab(0);
+                    flag =false;
+                }else {
+                    if (O2OUtils.turnLogin(MainActivity.this.getApplicationContext())) {
+                        flag = true;
+                        return;
+                    }
                 }
+
                 setTitle(mTabText[1]);
                 mTitle.setCompoundDrawables(null, null, null, null);
                 mTitle.setTextColor(getResources().getColor(R.color.theme_title_text));
