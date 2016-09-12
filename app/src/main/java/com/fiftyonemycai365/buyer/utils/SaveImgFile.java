@@ -2,11 +2,14 @@ package com.fiftyonemycai365.buyer.utils;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 
 import com.fiftyonemycai365.buyer.R;
@@ -16,6 +19,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by fengshuai on 16/5/17.
@@ -90,41 +94,59 @@ public class SaveImgFile {
         return bitmap;
     }
 
-    /**
-     * 将bitmap转为file保存
-     */
-    public static File saveBitmapFile(Bitmap bitmap, String filename){
+//    /**
+//     * 将bitmap转为file保存
+//     */
+//    public static File saveBitmapFile(Bitmap bitmap, String filename,Context context){
+//
+//        File file;
+//        BufferedOutputStream bos;
+//            file =getSDPath(filename);
+//            try {
+//                bos = new BufferedOutputStream(new FileOutputStream(file));
+//                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
+//                bos.flush();
+//                bos.close();
+//            } catch (FileNotFoundException e) {
+//                e.printStackTrace();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//        MediaStore.Images.Media.insertImage(context.getContentResolver(),
+//                file.getAbsolutePath(), fileName, null);
+//        return file;
+//
+//    }
 
-        File file;
-        BufferedOutputStream bos;
-        String storageState = Environment.getExternalStorageState();// 获取sd卡的状态
-        if (Environment.MEDIA_MOUNTED.equals(storageState)) {// 如果已挂载状态
-            file = new File(Environment.getExternalStorageDirectory().getPath()+"/myCai/" + filename + ".jpg");
-            try {
-                bos = new BufferedOutputStream(new FileOutputStream(file));
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
-                bos.flush();
-                bos.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }else{
-            file = new File("/myCai/" + filename + ".jpg");
-            try {
-                bos = new BufferedOutputStream(new FileOutputStream(file));
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
-                bos.flush();
-                bos.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+    public static void saveImageToGallery(Context context, Bitmap bmp) {
+        // 首先保存图片
+        File appDir = new File(Environment.getExternalStorageDirectory(), "MyCai");
+        if (!appDir.exists()) {
+            appDir.mkdir();
         }
-        return file;
+        String fileName ="dimensional_code" + ".jpg";
+        File file = new File(appDir, fileName);
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            bmp.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+        // 其次把文件插入到系统图库
+        try {
+            MediaStore.Images.Media.insertImage(context.getContentResolver(),
+                    file.getAbsolutePath(), fileName, null);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        // 最后通知图库更新
+        context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + file.getAbsolutePath())));
     }
 
 

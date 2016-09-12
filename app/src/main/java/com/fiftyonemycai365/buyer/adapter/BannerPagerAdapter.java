@@ -89,7 +89,9 @@ public class BannerPagerAdapter extends PagerAdapter {
             view.setImageUrl(ImgUrl.heightUrl(R.dimen.banner_height, mList.get(position).image), RequestManager.getImageLoader());
         }
         //        view.setImageUrl(mList.get(position).image, RequestManager.getImageLoader());
-        view.setScaleType(ImageView.ScaleType.CENTER_CROP);
+//        view.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        //客户提示要显示整个图片，不做裁剪
+        view.setScaleType(ImageView.ScaleType.FIT_XY);
         view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         return view;
     }

@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.telephony.TelephonyManager;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,6 +52,10 @@ public class LoginActivity extends BaseActivity implements BaseActivity.TitleLis
     private RelativeLayout mEyes;
     private boolean isChick = false;
 
+    private String device_no; //设备唯一标识号
+    private String device_type; //设备类型（机型，iPhone4,5,6s… huawei，xiaomi）
+    private String os_version; //操作系统类型（iOS8,9,10, miui1,androidXXXX…）
+
     /**
      * 创建时初始化title以及视图
      *
@@ -59,9 +65,20 @@ public class LoginActivity extends BaseActivity implements BaseActivity.TitleLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        TelephonyManager tm = (TelephonyManager) getSystemService(this.TELEPHONY_SERVICE);
+        device_no = tm.getDeviceId();
+
+        os_version =android.os.Build.VERSION.RELEASE;
+
+        device_type =  android.os.Build.MANUFACTURER;
+
+
+        Log.i("______",device_no+"===="+os_version+"====="+device_type);
+
         setTitleListener(this);//
         setPageTag(TagManager.LOGIN_ACTIVITY);
         initViews();
+
     }
 
     //初始化视图
@@ -281,6 +298,10 @@ public class LoginActivity extends BaseActivity implements BaseActivity.TitleLis
             Map<String, String> map = new HashMap<String, String>(2);
             map.put("mobile", mStrMobile);
             map.put("pwd", mStrPassword);
+            map.put("device_no",device_no);
+            map.put("device_type",device_type);
+            map.put("os_version","Android"+os_version);
+
             ApiUtils.post(getApplicationContext(), URLConstants.LOGIN, map, UserResultInfo.class, new Response.Listener<UserResultInfo>() {
                 @Override
                 public void onResponse(UserResultInfo response) {

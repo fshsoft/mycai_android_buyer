@@ -1,8 +1,11 @@
 package com.fiftyonemycai365.buyer.activity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v4.app.FragmentActivity;
+import android.telephony.TelephonyManager;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,13 +17,32 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.NetworkImageView;
+import com.fanwe.seallibrary.comm.Constants;
+import com.fanwe.seallibrary.comm.URLConstants;
+import com.fanwe.seallibrary.model.LocAddressInfo;
+import com.fanwe.seallibrary.model.PointInfo;
+import com.fanwe.seallibrary.model.UserInfo;
+import com.fanwe.seallibrary.model.result.UserPingResult;
 import com.fiftyonemycai365.buyer.R;
+import com.fiftyonemycai365.buyer.fragment.CustomDialogFragment;
+import com.fiftyonemycai365.buyer.utils.ApiUtils;
+import com.tencent.map.geolocation.TencentLocation;
+import com.tencent.map.geolocation.TencentLocationListener;
+import com.tencent.map.geolocation.TencentLocationManager;
+import com.tencent.map.geolocation.TencentLocationRequest;
 import com.zongyou.library.app.AppUtils;
 import com.zongyou.library.platform.ZYStatConfig;
 import com.zongyou.library.util.LogUtils;
+import com.zongyou.library.util.ToastUtils;
+import com.zongyou.library.util.storage.PreferenceUtils;
 import com.zongyou.library.volley.RequestManager;
 import com.zongyou.library.widget.util.ViewFinder;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * User: ldh (394380623@qq.com)
@@ -41,10 +63,16 @@ public class BaseActivity extends FragmentActivity {
 
     protected String mPageTag;
 
+    private String device_no; //设备唯一标识号
+    private String device_type; //设备类型（机型，iPhone4,5,6s… huawei，xiaomi）
+    private String os_version; //操作系统类型（iOS8,9,10, miui1,androidXXXX…）
+
     protected void onResume() {
         super.onResume();
         ZYStatConfig.onPageResume(this, getPageTag());
+
     }
+
 
     protected void onPause() {
         super.onPause();
@@ -61,6 +89,7 @@ public class BaseActivity extends FragmentActivity {
         }
         return mPageTag;
     }
+
 
     public interface TitleListener {
         public void setTitle(TextView title, ImageButton left, View right);
@@ -159,6 +188,12 @@ public class BaseActivity extends FragmentActivity {
         requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mViewFinder = new ViewFinder(this);
+
+        TelephonyManager tm = (TelephonyManager) getSystemService(this.TELEPHONY_SERVICE);
+        device_no = tm.getDeviceId();
+        os_version =android.os.Build.VERSION.RELEASE;
+        device_type =  android.os.Build.MANUFACTURER;
+
     }
 
     @Override
@@ -256,5 +291,57 @@ public class BaseActivity extends FragmentActivity {
 
     public FragmentActivity getActivity(){
         return this;
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+//        startLocation();
+        userPing();
+    }
+
+    /**
+     * 调用接口
+     * userId  登陆的用户ID，没有可以不传，或者传 0
+
+     mapPoint 地理位置信息， 例如：31.2123,123.4519  和登陆接口的保存一致
+
+     token 如果已经登陆的用户要加上token
+
+     device_no 设备唯一标识号
+
+     device_type 设备类型（机型，iPhone4,5,6s… huawei，xiaomi）
+
+     os_version 操作系统类型（iOS8,9,10, miui1,androidXXXX…）
+     */
+
+
+
+    private void userPing(){
+        LocAddressInfo info =PreferenceUtils.getObject(BaseActivity.this,LocAddressInfo.class);
+        String mapPoint = info.mapPoint.x+","+info.mapPoint.y;
+        UserInfo user = PreferenceUtils.getObject(BaseActivity.this, UserInfo.class);
+        String token = PreferenceUtils.getValue(BaseActivity.this, Constants.LOGIN_TOKEN, "");
+        Map<String, String> map = new HashMap<String, String>(2);
+        map.put("userId",user==null? "":user.id+"");
+//        map.put("mapPoint", mapPoint);
+        map.put("mapPoint",mapPoint);
+        map.put("token",token);
+        map.put("device_no",device_no);
+        map.put("device_type",device_type);
+        map.put("os_version","Android"+os_version);
+        ApiUtils.post(getApplicationContext(), URLConstants.USER_PING,map, UserPingResult.class,new Response.Listener<UserPingResult>(){
+
+            @Override
+            public void onResponse(UserPingResult userPingResult) {
+
+            }
+        },new Response.ErrorListener(){
+
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+            }
+        });
     }
 }

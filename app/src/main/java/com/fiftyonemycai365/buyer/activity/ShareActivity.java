@@ -303,7 +303,7 @@ public class ShareActivity extends BaseActivity implements BaseActivity.TitleLis
         @Override
         protected void onPostExecute(Bitmap result) {
             super.onPostExecute(result);
-            SaveImgFile.saveBitmapFile(result,"qrcode_icon");
+            SaveImgFile.saveImageToGallery(ShareActivity.this,result);
 //            dialog.dismiss();
             ToastUtils.show(ShareActivity.this,"二维码已保存到相册");
         }

@@ -63,6 +63,8 @@ public class URLConstants {
     //找回密码
     public static final String USER_RESET = DOMAIN + "user.repwd";
     public static final String LOGIN = DOMAIN + "user.login"; // 登录
+    //http://api.shnow.cn/buyer/v1/user.ping
+    public static final String USER_PING=DOMAIN+"user.ping";
     public static final String QUICK_LOGIN = DOMAIN + "user.verifylogin"; // 会员快捷登陆（验证码登录）
     public static final String LOGOUT = DOMAIN + "user.logout"; // 登出
     public static final String MESGREAD = DOMAIN + "msg.read"; // 登出
